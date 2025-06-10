@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Rama actual
-      - run: echo "Desplegando en la rama $GITHUB_REF"
+        run: echo "Desplegando en la rama $GITHUB_REF"
       - name: Datos del repositorio
-      - run: echo "Nombre del repositorio ${{ github.repository }}"
+        run: echo "Nombre del repositorio ${{ github.repository }}"
       - name: Datos del usuario 
-      - run: echo "Nombre del usuario ${{ github.actor }}"
+        run: echo "Nombre del usuario ${{ github.actor }}"
