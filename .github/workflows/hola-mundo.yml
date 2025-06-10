@@ -1,0 +1,16 @@
+name: Prueba incial #Nombre del workflow
+run-name: ¡Estoy aprendiendo GitHub Actions!
+on: [push] #trigger
+jobs:
+  hola-mundo: #nombre del job
+    runs-on: ubuntu-latest #SO de la maquina en la que corre
+    steps: #Lista de pasos que se ejecutaran
+      - name: Checkout #Clonar repositorio
+        uses: actions/checkout@v3
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Ejecutar script
+        run: node hola.js
+  
