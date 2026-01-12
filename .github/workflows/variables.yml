@@ -1,0 +1,13 @@
+name: Variables
+run-name: ¡Esto es la prueba de variables!
+on: push
+env:
+  SALUDO: Hola esto es una prueba
+  FECHA: 10/06/2025
+jobs:
+  cargar-saludo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Saludar
+        run: echo "$SALUDO, me llamo ${{ vars.NOMBRE }}. Hoy es $FECHA"
+        
